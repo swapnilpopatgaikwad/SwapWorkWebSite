@@ -1,4 +1,4 @@
-namespace SwapWorkWebSite
+namespace SwapWorkWebSite.Models
 {
     public class WeatherForecast
     {
