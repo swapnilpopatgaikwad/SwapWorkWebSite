@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using SwapWorkWebSite.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<SwapWorkWebSiteContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SwapWorkWebSiteContext") ?? throw new InvalidOperationException("Connection string 'SwapWorkWebSiteContext' not found.")));
 
 // Add services to the container.
 
